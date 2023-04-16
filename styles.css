@@ -76,7 +76,7 @@ main {
 
 
 img {
-    height: 30%;
+    max-height: 40;
     opacity: 0.8;
     min-height: 30em;
     min-width: 16.6em;
