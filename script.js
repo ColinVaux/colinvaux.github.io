@@ -23,7 +23,7 @@ let over = 0;
             if (trigger.getAttribute('class').includes('curser') == true) {
                 nav.setAttribute('class', 'nav justify-content-center')
             };
-          }, 1000);
+          }, 500);
     });
     nav.addEventListener('mouseleave', function() {
         setTimeout(function() {
