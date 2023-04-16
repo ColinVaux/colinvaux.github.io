@@ -1,11 +1,28 @@
+html {
+    min-height: 100%;
+    height: auto;
+}
 body {
     background-image: url(background.jpeg);
     background-size: cover;
     background-position: center;
-    background-color: #f8f9fa;
+    background-color: white;
     background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
+    height: -webkit-fill-available;
+}
+
+p {
+    min-width: 18em;
+    min-height: 18em;
+    max-width: 25em;
+    max-height: 27em;
+    text-align: center;
+    overflow: auto;
+}
+
+.blank {
+    background-image: none;
+    background-color: gray;
 }
 
 .sticky-bottom {
@@ -33,21 +50,62 @@ body {
     color: #d4af37;
 }
 
+
+section {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
 main {
+    max-width: 20em;
     font-size: 1.1rem;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .color {
     background-color: #000000b0;
     color: #f8f9fa;
 }
 
+.poems {
+    max-width: 20em;
+    min-height: 25em;
+
+}
+
+
 img {
-    opacity: 0.75;
+    height: 30%;
+    opacity: 0.8;
     min-height: 30em;
     min-width: 16.6em;
-    max-width: 25%;
-    transform: perspective(50rem);
+    max-width: 20em;
+}
+
+container {
+    padding-top: 5em;
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+    flex-direction: row-reverse;
+    flex-basis: auto;
+    justify-content: center;
+    gap: 2em;
+}
+
+.portrait {
+    flex-wrap: wrap;
+}
+
+.vertical {
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+}
+
+.fill {
+    height: 10em;
+    color: #607d8b00;
 }

@@ -1,8 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-const nav = document.querySelector('.nav');
-const trigger = document.querySelector('.trigger');
-const pop = document.querySelector('#image');
-let over = 0;
+    const nav = document.querySelector('.nav');
+    const trigger = document.querySelector('.trigger');
+    const container = document.querySelectorAll('.container');
+    let over = 0;
+    if (window.innerWidth < window.innerHeight) {
+        container.forEach(function(each) {
+            each.setAttribute('class', 'portrait');
+            });
+        };
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < window.innerHeight) {
+            container.forEach(function(each) {
+                each.setAttribute('class', 'portrait');
+            });
+        };
+        if (window.innerWidth > window.innerHeight) {
+            container.forEach(function(each) {
+                each.setAttribute('class', 'landscape');
+            });
+        };
+    });
     document.querySelectorAll('.nav-link').forEach(function(each) {
        const check = each.getAttribute('href');
        const page = document.URL;
@@ -31,8 +48,5 @@ let over = 0;
                 nav.setAttribute('class', 'nav justify-content-center hidden')
             }
           }, 1000);
-    });
-    pop.addEventListener('mouseenter', function() {
-        new MouseEvent('click', pop);
     });
 });
