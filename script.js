@@ -3,23 +3,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav');
     const trigger = document.querySelector('.trigger');
     const container = document.querySelectorAll('.container');
-
     if (window.innerWidth < window.innerHeight) {
         container.forEach(function(each) {
-            each.setAttribute('class', 'portrait');
+            each.setAttribute('class', 'container portrait');
             });
         };
+
+    const tick = new Event('tick');
+    document.addEventListener('tick', function() {
+        setTimeout(function() {
+            if (trigger.getAttribute('class').includes('curser') == false) {
+                nav.setAttribute('class', 'nav justify-content-center hidden')
+            };
+            document.dispatchEvent('tick');
+        }, 2000);
+    });
 
     window.addEventListener('resize', function() {
         if (window.innerWidth < window.innerHeight) {
             container.forEach(function(each) {
-                each.setAttribute('class', 'portrait');
+                each.setAttribute('class', 'container portrait');
             });
         };
-        
+
         if (window.innerWidth > window.innerHeight) {
             container.forEach(function(each) {
-                each.setAttribute('class', 'landscape');
+                each.setAttribute('class', 'container landscape');
             });
         };
     });
@@ -48,8 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (trigger.getAttribute('class').includes('curser') == false) {
                 nav.setAttribute('class', 'nav justify-content-center hidden')
             };
-          }, 2000);
+        }, 2000);
     });
+
+    nav.setAttribute('class', 'nav justify-content-center hidden')
 
     trigger.addEventListener('mouseenter', function() {
         setTimeout(function() {
@@ -57,13 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 nav.setAttribute('class', 'nav justify-content-center')
             };
           }, 500);
-    });
-
-    nav.addEventListener('mouseleave', function() {
-        setTimeout(function() {
-            if (trigger.getAttribute('class') == 'trigger sticky-bottom') {
-                nav.setAttribute('class', 'nav justify-content-center hidden')
-            }
-          }, 1000);
     });
 });
