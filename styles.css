@@ -23,7 +23,6 @@ p {
 }
 
 img {
-
     opacity: 0.8;
     max-height: 38em;
     min-height: 30em;
@@ -82,11 +81,6 @@ img {
 
 .nav-link {
     color: #d4af37;
-}
-
-.poems {
-    min-width: 20em;
-    max-height: 25em;
 }
 
 .portrait {
