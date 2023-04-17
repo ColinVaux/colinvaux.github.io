@@ -12,6 +12,8 @@ body {
 }
 
 p {
+    padding-right: 2em;
+    padding-left: 2em;
     min-width: 18em;
     min-height: 18em;
     max-width: 25em;
