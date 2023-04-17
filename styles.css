@@ -20,64 +20,10 @@ p {
     overflow: auto;
 }
 
-.blank {
-    background-image: none;
-    background-color: gray;
-}
-
-.sticky-bottom {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    z-index: 1020:
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-
-.nav {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 2.5;
-    background-color: black;
-    opacity: 0.95;
-
-}
-
-.nav-link {
-    color: #d4af37;
-}
-
-
-section {
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-main {
-    max-width: 20em;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-.color {
-    background-color: #000000b0;
-    color: #f8f9fa;
-}
-
-.poems {
-    max-width: 20em;
-    min-height: 25em;
-
-}
-
-
 img {
-    max-height: 40;
+
     opacity: 0.8;
+    max--height: 38em;
     min-height: 30em;
     min-width: 16.6em;
     max-width: 20em;
@@ -94,8 +40,64 @@ container {
     gap: 2em;
 }
 
+section {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+main {
+    max-width: 20em;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.blank {
+    background-image: none;
+    background-color: gray;
+}
+
+.color {
+    background-color: #000000b0;
+    color: #f8f9fa;
+}
+
+.fill {
+    height: 10em;
+    color: #607d8b00;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.nav {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2.5;
+    background-color: black;
+    opacity: 0.95;
+}
+
+.nav-link {
+    color: #d4af37;
+}
+
+.poems {
+    min-width: 20em;
+    max-height: 25em;
+}
+
 .portrait {
     flex-wrap: wrap;
+}
+
+.sticky-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: 1020:
 }
 
 .vertical {
@@ -105,7 +107,3 @@ container {
     margin-top: 0%;
 }
 
-.fill {
-    height: 10em;
-    color: #607d8b00;
-}
